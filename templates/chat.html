@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <button class="back-button" onclick="goBack()">⬅ Back</button>
+
+  <div class="chat-box">
+    <h3>Welcome, {{ display_name }}</h3>
+    <div id="systemMessages" class="system"></div>
+    <div id="modeStatus">Mode: Public</div>
+
+    <!-- Main Chat Window -->
+    <div id="messages" class="messages"></div>
+
+    <!-- Chat History Box -->
+    <div id="historyView"></div>
+
+    <!-- Message input and controls -->
+    <input id="msgInput" placeholder="Type a message..." />
+    <button onclick="sendMessage()">Send</button>
+    <button onclick="getHistory()">📜 History</button>
+    <button onclick="switchMode()">🔁 Switch</button>
+    <input type="file" id="fileInput" style="display:none;" />
+    <button onclick="document.getElementById('fileInput').click()">📁 Send File</button>
+    <button onclick="viewUploadedFiles()">📂 Uploaded Files</button>
+  </div>
+
+   <div id="uploadedFilesPanel">
+  <button onclick="closeFilesPanel()">✖</button>
+  <h3>📂 Uploaded Files</h3>
+  <ul id="uploadedFileList"></ul>
+</div>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script>
+    const displayName = "{{ display_name }}";
+  </script>
+  <script src="/static/chat.js"></script>
+
+</body>
+</html>

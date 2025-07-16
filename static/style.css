@@ -1,0 +1,149 @@
+body {
+    background-color: #0f1b2b;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 50px;
+  }
+  .form-box, .chat-box {
+    background-color: #172c45;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    margin: auto;
+  }
+  input, button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  .messages {
+    height: 300px;
+    overflow-y: scroll;
+    background-color: #0f1b2b;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* NEW: only for system messages (no scroll) */
+  .system {
+    height: 60px;
+    overflow-y: scroll;
+    background-color: #0d2a41;
+    font-style: italic;
+    padding: 5px;
+    margin-bottom: 8px;
+    color: #aaa;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+
+  .bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    margin: 6px 10px;
+    border-radius: 15px;
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .left {
+    background-color: #2b3a4a;
+    text-align: left;
+    float: left;
+    clear: both;
+    border-top-left-radius: 0;
+  }
+  
+  .right {
+    background-color: #0077cc;
+    text-align: right;
+    float: right;
+    clear: both;
+    border-top-right-radius: 0;
+  }
+  
+  .history {
+    background-color: #555;
+    text-align: center;
+    font-style: italic;
+    border-radius: 8px;
+    padding: 4px;
+    margin: 4px;
+    color: #ddd;
+  }
+
+  /* Back Button */
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* History View */
+#historyView {
+  display: none;
+  background-color: #4b8fe1;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* File link styling inside chat bubbles */
+.messages a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Uploaded Files Side Panel */
+#uploadedFilesPanel {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  width: 300px;
+  height: 400px;
+  background-color: #4b6b99;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  overflow-y: auto;
+  z-index: 9999;
+  display: none;
+  color: white;
+}
+#uploadedFilesPanel h3 {
+  margin-top: 0;
+  color: #9eabaf;
+}
+#uploadedFilesPanel ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+#uploadedFilesPanel li {
+  margin-bottom: 10px;
+}
+#uploadedFilesPanel button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
