@@ -37,3 +37,14 @@ This app supports **public and private messaging**, **file uploads**, **chat his
 ```bash
 git clone https://github.com/Waqar-Abid/Flask-Chat-App.git
 cd Flask-Chat-App
+
+
+
+2. Install Dependencies
+pip install -r requirements.txt
+
+3. Run the App
+python App.py
+
+Then open your browser and go to:
+http://127.0.0.1:5000
